@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:7.4.0
+    working_directory: ~/cci-demo-react
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run unit
